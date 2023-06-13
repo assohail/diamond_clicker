@@ -55,7 +55,7 @@ module diamond_clicker::game {
     }
 
     public entry fun click(account: &signer) acquires GameStore {
-        //  check if GameStore does not exist - if not, initialize_game(account);
+        // check if GameStore does not exist - if not, initialize_game(account);
 
          let game_store = borrow_global_mut<GameStore>(account);
          game_store.diamonds += 1;
